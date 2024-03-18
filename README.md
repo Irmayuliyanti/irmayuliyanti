@@ -1,5 +1,5 @@
 ## Pemograman Berbasis Framework
-Nama : Irma Yuliyanti 
+Nama : IRMA YULIYANTI
 NIM  : 220202086
 Kelas : TI-2D
 
@@ -50,7 +50,7 @@ Basis data diperlukan untuk sebagian besar pemrograman aplikasi web. Basis data 
 
 # Instalasi CodeIgniter <br>
 CodeIgniter memiliki dua metode instalasi yang didukung: download manual, atau menggunakan Composer.
-# Menggunakan Composer <br>
+Berikut dengan instal CI menggunakan Composer: <br>
 1. Pastikan Anda susdah mengisntal composer <br>
 ![image](https://github.com/Irmayuliyanti/irmayuliyanti/assets/134593991/22e0fc3f-7fb6-45ac-93bb-d1110c638277)
 
