@@ -49,8 +49,8 @@ Basis data diperlukan untuk sebagian besar pemrograman aplikasi web. Basis data 
 5. Oracle Database melalui OCI8driver (hanya versi 12.1 dan lebih tinggi)
 
 # Instalasi CodeIgniter <br>
-CodeIgniter memiliki dua metode instalasi yang didukung: download manual, atau menggunakan Composer.
-Berikut dengan instal CI menggunakan Composer: <br>
+CodeIgniter memiliki dua metode instalasi yang didukung: download manual, atau menggunakan Composer. <br>
+Berikut dengan instal CI menggunakan Composer: 
 1. Pastikan Anda susdah mengisntal composer <br>
 ![image](https://github.com/Irmayuliyanti/irmayuliyanti/assets/134593991/22e0fc3f-7fb6-45ac-93bb-d1110c638277)
 
