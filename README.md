@@ -1,7 +1,9 @@
 ## Pemograman Berbasis Framework
 Nama : IRMA YULIYANTI
 NIM  : 220202086
-Kelas : TI-2D
+Kelas : TI-2D <br>
+
+![image](https://github.com/Irmayuliyanti/irmayuliyanti/assets/134593991/30c4180d-6f0b-439f-ae37-8a3e38745f68)
 
 # Apa yang dimaksud dengan Framework? <br>
 Framework adalah sebuah abstraksi pembuatan perangkat lunak dimana didalamnya menyediakan fungsi-fungsi umum yang dapat digunakan. Framework memiliki software yang terdiri dari kerangka kerja (yang didalamnya menyediakan standar & aturan pembuatan perangkat lunak sesuai dengan bahasanya), reusability (fungsi-fungsi yang dapat digunakan secara berulang), framework juga bisa berisi program, compiler, library, tool, sets, api, komponen, dll (digunakan untuk mempermudah perangkat lunak), semua bahasa pemogramam populer memliki framework.
@@ -24,9 +26,6 @@ Framework adalah sebuah abstraksi pembuatan perangkat lunak dimana didalamnya me
 # Apa yang dimaksud dengan CodeIgniter <br>
 CodeIgniter adalah akerangka pengembangan aplikasi atau sebuah toolkit untuk membangun situs web menggunakan bahasa PHP. Tujuannya adalah untuk memungkinkan mengembangkan project jauh lebih cepat daripada kita menulis kode dari awal, dengan menyediakan kumpulan library yang kaya untuk tugas-tugas umum, serta antarmuka sederhana, dan struktur logis untuk mengakses library ini.
 
-# Sejarah CodeIgniter <br>
-CodeIgniter awalnya dikembangkan oleh **EllisLab**. Selama bertahun-tahun, dikembangkan dan dikelola oleh **EllisLab**, Tim Pengembangan Expression Engine, dan sekelompok anggota komunitas yang disebut Tim Reaktor. Pada tahun 2014, CodeIgniter diakuisisi oleh Institut Teknologi British Columbia dan kemudian secara resmi diumumkan sebagai project yang dikelola komunitas. Pada tahun 2019, CodeIgniter Foundation dibentuk untuk menyediakan grup pengelola abadi yang terpisah dari entitas lain untuk membantu memastikan masa depan framework tersebut.
-
 # Alasan mengapa menggunakan CodeIgniter
 1.	Small footprint (framework yang kecil ukurannya tidak sampai lebih dari 10 mega).
 2.	Memiliki peforma yang baik.
@@ -39,6 +38,21 @@ CodeIgniter awalnya dikembangkan oleh **EllisLab**. Selama bertahun-tahun, dikem
 9.	Memiliki dokumentasi yang jelas dan menyeluruh.
 10.	Menggunakan pattern MVC(Model-View-Controller)
     MVC adalah sebuah pola arsitektur pada perancangan perangkat lunak berorientasi objek yang memsisahkan antara tampilan, data, dan proses.
+
+# Sejarah CodeIgniter <br>
+CodeIgniter awalnya dikembangkan oleh **EllisLab**. Selama bertahun-tahun, dikembangkan dan dikelola oleh **EllisLab**, Tim Pengembangan Expression Engine, dan sekelompok anggota komunitas yang disebut Tim Reaktor. Pada tahun 2014, CodeIgniter diakuisisi oleh Institut Teknologi British Columbia dan kemudian secara resmi diumumkan sebagai project yang dikelola komunitas. Pada tahun 2019, CodeIgniter Foundation dibentuk untuk menyediakan grup pengelola abadi yang terpisah dari entitas lain untuk membantu memastikan masa depan framework tersebut.
+
+# Persyaratan Server
+PHP dan Ekstensi yang Diperlukan <br>
+1. PHP dan Ekstensi yang Diperlukan
+2. Ekstensi PHP Opsional
+3. Basis Data yang Didukung
+   
+PHP dan Ekstensi yang Diperlukan <br>
+Diperlukan PHP versi 7.4 atau lebih baru, dengan ekstensi PHP berikut diaktifkan:
+1. internasional
+2. mbstring
+3. json
    	
 # Basis Data yang Didukung <br>
 Basis data diperlukan untuk sebagian besar pemrograman aplikasi web. Basis data yang didukung saat ini adalah:
@@ -50,7 +64,7 @@ Basis data diperlukan untuk sebagian besar pemrograman aplikasi web. Basis data 
 
 # Instalasi CodeIgniter <br>
 CodeIgniter memiliki dua metode instalasi yang didukung: download manual, atau menggunakan Composer. <br>
-Berikut dengan instal CI menggunakan Composer: 
+Berikut dengan instal CI menggunakan Composer : 
 1. Pastikan Anda susdah mengisntal composer <br>
 ![image](https://github.com/Irmayuliyanti/irmayuliyanti/assets/134593991/22e0fc3f-7fb6-45ac-93bb-d1110c638277)
 
