@@ -86,10 +86,10 @@ CodeIgniter awalnya dikembangkan oleh **EllisLab**. Selama bertahun-tahun, dikem
 # 2. Instalansi CodeIgniter <br>
 CodeIgniter memiliki dua metode instalasi yang didukung: download manual, atau menggunakan Composer. <br>
 Berikut dengan instal CI menggunakan Composer : 
-1. Pastikan Anda susdah mengisntal composer. <br>
+1. Pastikan Anda sudah mengisntal composer. <br>
 ![image](https://github.com/Irmayuliyanti/irmayuliyanti/assets/134593991/22e0fc3f-7fb6-45ac-93bb-d1110c638277)
 
-2. Masukkan perintah download CI4. <br>
+2. Masukkan perintah download CI4 susai website CI. <br>
 ![image](https://github.com/Irmayuliyanti/irmayuliyanti/assets/134593991/a498bdf0-9dc5-4a7e-b8a9-9ac9288aa724)
 
 3. Masukkan perintah cd nama file, masukkan php spark serve untuk menjalankan server. <br>
@@ -116,7 +116,7 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 ```
 
-Arahan ini mengatakan bahwa setiap permintaan masuk tanpa konten apa pun yang ditentukan harus ditangani oleh index()metode di dalam Homepengontrol. Tambahkan baris berikut, setelah arahan rute untuk '/'. <br>
+Arahan ini mengatakan bahwa setiap permintaan masuk tanpa konten apa pun yang ditentukan harus ditangani oleh index() metode di dalam Homepengontrol. Tambahkan baris berikut, setelah arahan rute untuk '/'. <br>
 
 ```
 use App\Controllers\Pages;
@@ -125,7 +125,7 @@ $routes->get('pages', [Pages::class, 'index']);
 $routes->get('(:segment)', [Pages::class, 'view']);
 ```
 
-CodeIgniter membaca aturan routingnya dari atas ke bawah dan merutekan permintaan ke aturan pertama yang cocok. Setiap aturan adalah ekspresi reguler (sisi kiri) yang dipetakan ke pengontrol dan nama metode (sisi kanan). Ketika sebuah permintaan masuk, CodeIgniter mencari kecocokan pertama, dan memanggil pengontrol dan metode yang sesuai, mungkin dengan argumen. <br>
+CodeIgniter membaca aturan routingnya dari atas ke bawah dan merutekan permintaan ke aturan pertama yang cocok. Setiap aturan adalah ekspresi reguler (sisi kiri) yang dipetakan ke pengontrol dan nama metode (sisi kanan). Ketika sebuah permintaan masuk, CodeIgniter mencari kecocokan pertama dan memanggil pengontrol dan metode yang sesuai. <br>
 
 # Ayo Buat Pengendali Pertama kita <br>
 # B. Buat Pengontrol Halaman <br>
@@ -149,7 +149,7 @@ class Pages extends BaseController
 }
 ```
 
-Dengan view()metode yang menerima satu argumen bernama $page. Ia juga memiliki index()metode, sama dengan pengontrol default yang ditemukan di app/Controllers/Home.php ; metode itu menampilkan halaman selamat datang CodeIgniter. Kelas Pages memperluas BaseControllerkelas yang memperluas CodeIgniter\Controllerkelas berarti kelas Pages baru dapat mengakses metode dan properti yang ditentukan dalam CodeIgniter\Controllerkelas ( system/Controller.php ) yang akan menjadi pusat dari setiap permintaan pada aplikasi web. Seperti kelas PHP lainnya, Anda menyebutnya di dalam pengontrol Anda sebagai $this. <br>
+Dengan view() metode yang menerima satu argumen bernama $page. Juga memiliki index() metode, sama dengan pengontrol default yang ditemukan di app/Controllers/Home.php; metode menampilkan halaman selamat datang CodeIgniter. Kelas Pages memperluas BaseController kelas yang memperluas CodeIgniter\Controller kelas berarti kelas Pages baru dapat mengakses metode dan properti yang ditentukan dalam CodeIgniter\Controller kelas ( system/Controller.php ) yang akan menjadi pusat dari setiap permintaan pada aplikasi web. Seperti kelas PHP lain menyebutnya di dalam pengontrol sebagai $this. <br>
 
 # C. Buat Tampilan <br>
 Buat header di app/Views/templates/header.php dan tambahkan kode berikut: <br>
@@ -164,7 +164,7 @@ Buat header di app/Views/templates/header.php dan tambahkan kode berikut: <br>
     <h1><?= esc($title) ?></h1>
 ```
 
-Header berisi kode HTML dasar yang ingin Anda tampilkan sebelum memuat tampilan utama, bersama dengan judul. Ini juga akan menampilkan $titlevariabel, yang akan kita definisikan nanti di pengontrol. Sekarang, buat footer di app/Views/templates/footer.php yang menyertakan kode berikut: <br>
+Header berisi kode HTML dasar yang ingin Anda tampilkan sebelum memuat tampilan utama bersama dengan judul. Ini akan menampilkan $titlevariabel, yang akan kita definisikan nanti di pengontrol. Buat footer di app/Views/templates/footer.php yang menyertakan kode berikut: <br>
 ```
     <em>&copy; 2022</em>
 </body>
@@ -173,10 +173,10 @@ Header berisi kode HTML dasar yang ingin Anda tampilkan sebelum memuat tampilan 
 
 # Menambahkan Logika ke Controller <br>
 # D. Buat home.php dan about.php <br>
-Sebelumnya Anda menyiapkan pengontrol dengan suatu view()metode. Metode ini menerima satu parameter, yaitu nama halaman yang akan dimuat. Badan halaman statis akan ditempatkan di direktori app/Views/pages. Di direktori itu, buat dua file bernama home.php dan about.php . Di dalam file tersebut, ketikkan beberapa teks - apa pun yang Anda suka - dan simpan. Jika Anda ingin tampil tidak orisinal, cobalah “Hello World!”.
+Sebelumnya siapkan pengontrol dengan suatu view() metode. Metode ini menerima satu parameter, yaitu nama halaman yang akan dimuat. Badan halaman statis akan ditempatkan di direktori app/Views/pages. Di direktori itu, buat dua file bernama home.php dan about.php . Di dalam file tersebut, ketikkan beberapa teks apa pun yang Anda suka dan simpan. Jika Anda ingin tampil tidak orisinal, cobalah “Hello World!”.
 
 # E. Halaman Lengkap::view() Metode
-Untuk memuat halaman tersebut, Anda harus memeriksa apakah halaman yang diminta benar-benar ada. Ini akan menjadi isi metode view()pada Pagespengontrol yang dibuat di atas: <br>
+Untuk memuat halaman tersebut, harus memeriksa apakah halaman yang diminta benar-benar ada. Ini akan menjadi isi metode view()pada Pagespengontrol yang dibuat di atas: <br>
 ```
 <?php
 
@@ -205,7 +205,7 @@ class Pages extends BaseController
 ```
 
 Dan tambahkan setelah baris untuk mengimpor kelas.use CodeIgniter\Exceptions\PageNotFoundException;namespacePageNotFoundException. <br>
-Sekarang, ketika halaman yang diminta memang ada, halaman tersebut dimuat, termasuk header dan footer, dan dikembalikan ke pengguna. Jika pengontrol mengembalikan string, string tersebut akan ditampilkan kepada pengguna. <br>
+Sekarang, ketika halaman yang diminta memang ada, halaman tersebut dimuat, termasuk header dan footer, dan dikembalikan ke pengguna. Jika pengontrol mengembalikan string tersebut akan ditampilkan kepada pengguna. <br>
 
 # F. Menjalankan Aplikasi <br>
 Anda tidak dapat menjalankan aplikasi menggunakan server bawaan PHP, karena aplikasi tersebut tidak akan memproses aturan .htaccess yang disediakan di public dengan benar, sehingga menghilangkan kebutuhan untuk menentukan “ index.php/ ” sebagai bagian dari URL. CodeIgniter memiliki perintahnya, di root proyek Anda:
@@ -218,8 +218,8 @@ Kode artinya akan memulai server web, dapat diakses pada port 8080. Jika Anda me
 
 # Bagian Berita <br>
 # A. Buat Database untuk Digunakan <br>
-Anda perlu membuat database ci4tutorialyang dapat digunakan untuk tutorial ini, dan kemudian mengkonfigurasi CodeIgniter untuk menggunakannya. <br>
-Menggunakan klien database Anda, sambungkan ke database Anda dan jalankan perintah SQL di bawah ini (MySQL): <br>
+Anda perlu membuat database ci4tutorial yang dapat digunakan untuk tutorial ini, dan kemudian mengkonfigurasi CodeIgniter untuk menggunakannya. <br>
+Menggunakan klien database Anda, sambungkan ke database dan jalankan perintah SQL di bawah ini (MySQL): <br>
 ```
 CREATE TABLE news (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -240,7 +240,7 @@ INSERT INTO news VALUES
 ```
 
 # B. Hubungkan ke Basis Data Anda <br>
-File konfigurasi lokal, .env , yang Anda buat saat menginstal CodeIgniter, harus memiliki pengaturan properti database yang tidak diberi komentar dan disetel dengan tepat untuk database yang ingin Anda gunakan. Pastikan Anda telah mengkonfigurasi database Anda dengan benar seperti yang dijelaskan dalam Konfigurasi Database: <br>
+File konfigurasi lokal, .env , yang di buat saat menginstal CodeIgniter, harus memiliki pengaturan properti database yang tidak diberi komentar dan disetel dengan tepat untuk database yang ingin Anda gunakan. Pastikan telah terkonfigurasi database dengan benar seperti yang dijelaskan dalam Konfigurasi Database: <br>
 ```
 database.default.hostname = localhost
 database.default.database = ci4tutorial
@@ -250,7 +250,7 @@ database.default.DBDriver = MySQLi
 ```
 
 # Menyiapkan Model Anda <br>
-Daripada menulis operasi database langsung di pengontrol, kueri harus ditempatkan dalam model, sehingga dapat digunakan kembali dengan mudah nanti. Model adalah tempat Anda mengambil, menyisipkan, dan memperbarui informasi dalam database atau penyimpanan data lainnya. Mereka menyediakan akses ke data Anda. Anda dapat membaca lebih lanjut tentang hal ini di Menggunakan Model CodeIgniter. <br>
+Daripada menulis operasi database langsung di pengontrol, kueri harus ditempatkan dalam model, sehingga dapat digunakan kembali dengan mudah nanti. Model adalah tempat untuk mengambil, menyisipkan, dan memperbarui informasi dalam database atau penyimpanan data lainnya. Mereka menyediakan akses ke data. Anda dapat membaca lebih lanjut tentang hal ini di Menggunakan Model CodeIgniter. <br>
 
 # C. Buat Model Berita
 Buka direktori app/Models dan buat file baru bernama NewsModel.php dan tambahkan kode berikut. <br>
@@ -283,10 +283,10 @@ Tambahkan kode berikut ke model Anda.
     }
 ```
 
-Dengan kode ini dapat melakukan dua kueri berbeda, bisa mendapatkan semua catatan berita, atau mendapatkan item berita melalui siputnya. <br>
+Dengan kode ini dapat melakukan dua queri berbeda, bisa mendapatkan semua catatan berita atau mendapatkan item berita melalui siputnya. <br>
 
 # Tampilkan Berita <br>
-Model harus dikaitkan dengan tampilan yang akan menampilkan item berita kepada pengguna. Ini bisa dilakukan di Pagespengontrol yang kami buat sebelumnya, tetapi demi kejelasan, Newspengontrol baru telah ditentukan. <br>
+Model harus dikaitkan dengan tampilan yang menampilkan item berita kepada pengguna. Ini bisa dilakukan di Pagespengontrol yang kami buat sebelumnya, tetapi demi kejelasan Newspengontrol baru telah ditentukan. <br>
 # D. Menambahkan Aturan Perutean <br>
 Ubah file app/Config/Routes.php Anda , sehingga terlihat seperti berikut: <br>
 ```
@@ -304,7 +304,7 @@ $routes->get('pages', [Pages::class, 'index']);
 $routes->get('(:segment)', [Pages::class, 'view']);
 ```
 
-Hal ini memastikan permintaan mencapai Newspengontrol alih-alih langsung ke Pagespengontrol. Baris kedua $routes->get()merutekan URI dengan slug ke show()metode di Newspengontrol. <br>
+Hal ini memastikan permintaan mencapai Newspengontrol alih-alih langsung ke Pagespengontrol. Baris kedua $routes->get() merutekan URI dengan slug ke show()  metode di Newspengontrol. <br>
 
 # E. Buat Pengontrol Berita <br>
 Buat pengontrol baru di app/Controllers/News.php. <br>
@@ -334,7 +334,7 @@ class News extends BaseController
 ```
 
 # F. Berita Lengkap::index() Metode
-Sekarang data diambil oleh pengontrol melalui model kami, tetapi belum ada yang ditampilkan. Hal berikutnya yang harus dilakukan adalah meneruskan data ini ke tampilan. Ubah index()metodenya menjadi seperti ini: <br>
+Sekarang data diambil oleh pengontrol melalui model kami, tetapi belum ada yang ditampilkan. Hal berikutnya yang harus dilakukan adalah meneruskan data ini ke tampilan. Ubah index() metodenya menjadi seperti ini: <br>
 ```
 <?php
 
@@ -393,7 +393,7 @@ Buat app/Views/news/index.php dan tambahkan potongan kode berikutnya.<br>
 ```
 
 # H. Berita Lengkap::show() Metode <br>
-Model yang dibuat sebelumnya dibuat sedemikian rupa sehingga dapat dengan mudah digunakan untuk fungsi ini. Anda hanya perlu menambahkan beberapa kode ke controller dan membuat tampilan baru. Kembali ke Newspengontrol dan perbarui show()metode dengan yang berikut: <br>
+Model yang dibuat sebelumnya dibuat sedemikian rupa sehingga dapat dengan mudah digunakan untuk fungsi ini. Anda hanya perlu menambahkan beberapa kode ke controller dan membuat tampilan baru. Kembali ke Newspengontrol dan perbarui show() metode dengan yang berikut: <br>
 ```
 <?php
 
@@ -504,10 +504,10 @@ Untuk memasukkan data ke dalam database perlu membuat formulir yang dapat memasu
 </form>
 ```
 
-Fungsi ini session() digunakan untuk mendapatkan objek Sesi, dan session()->getFlashdata('error') digunakan untuk menampilkan kesalahan terkait perlindungan CSRF kepada pengguna. <br>
-Fungsi validation_list_errors() yang disediakan oleh Form Helper digunakan untuk melaporkan kesalahan terkait validasi form. <br>
-Fungsi ini csrf_field() membuat masukan tersembunyi dengan token CSRF yang membantu melindungi dari beberapa serangan umum. <br>
-Fungsi set_value() yang disediakan oleh Form Helper digunakan untuk menampilkan data masukan lama ketika terjadi kesalahan. <br>
+1. Fungsi ini session() digunakan untuk mendapatkan objek Sesi, dan session()->getFlashdata('error') digunakan untuk menampilkan kesalahan terkait perlindungan CSRF kepada pengguna.
+2. Fungsi validation_list_errors() yang disediakan oleh Form Helper digunakan untuk melaporkan kesalahan terkait validasi form.
+3. Fungsi ini csrf_field() membuat masukan tersembunyi dengan token CSRF yang membantu melindungi dari beberapa serangan umum.
+4. Fungsi set_value() yang disediakan oleh Form Helper digunakan untuk menampilkan data masukan lama ketika terjadi kesalahan. <br>
 
 # Pengendali Berita <br>
 # D. Tambahkan Berita::baru() untuk Menampilkan Formulir <br>
@@ -613,11 +613,73 @@ class NewsModel extends Model
 }
 ```
 
-Perhatikan bahwa kita mengabaikan id? Itu karena Anda hampir tidak perlu melakukan hal itu, karena bidang yang bertambah secara otomatis dalam database. Ini membantu melindungi dari Kerentanan Penugasan Massal. Jika model Anda menangani stempel waktu Anda, Anda juga akan mengabaikannya. <br>
+Perhatikan bahwa mengabaikan id? Itu karena Anda hampir tidak perlu melakukan hal itu, karena bidang yang bertambah secara otomatis dalam database. Ini membantu melindungi dari Kerentanan Penugasan Massal. Jika model Anda menangani stempel waktu Anda, Anda juga akan mengabaikannya. <br>
 
 # H. Buat Item Berita <br>
 Sekarang arahkan browser Anda ke lingkungan pengembangan lokal tempat Anda menginstal CodeIgniter dan tambahkan /news/new ke URL. Tambahkan beberapa berita dan periksa halaman berbeda yang Anda buat. <br>
 <img width="541" alt="image" src="https://github.com/Irmayuliyanti/irmayuliyanti/assets/134593991/2e213467-1390-4bfd-a81a-64d24da8ae76">
+
+# 4. Ikhtisar CodeIgniter 4 <br>
+# Struktur Aplikasi <br>
+# A. Direktori Default <br>
+Instalasi baru memiliki lima direktori: app/, public/, writable/, tests/dan vendor/atau system/. Masing-masing direktori ini memiliki peran yang sangat spesifik untuk dimainkan. <br>
+
+aplikasi <br>
+Direktori app adalah tempat semua kode aplikasi, hadir dengan struktur direktori default yang berfungsi dengan baik untuk banyak aplikasi. Folder berikut membentuk konten dasar: <br>
+```
+app/
+    Config/         Stores the configuration files
+    Controllers/    Controllers determine the program flow
+    Database/       Stores the database migrations and seeds files
+    Filters/        Stores filter classes that can run before and after controller
+    Helpers/        Helpers store collections of standalone functions
+    Language/       Multiple language support reads the language strings from here
+    Libraries/      Useful classes that don't fit in another category
+    Models/         Models work with the database to represent the business entities
+    ThirdParty/     ThirdParty libraries that can be used in application
+    Views/          Views make up the HTML that is displayed to the client
+```
+
+Karena app direktori sudah diberi namespace maka bebas memodifikasi struktur direktori agar sesuai dengan kebutuhan aplikasi. <br>
+
+Semua file dalam direktori berada di bawah Appnamespace, meskipun bebas mengubahnya di app/Config/Constants.php. <br>
+
+# sistem <br>
+
+Direktori ini menyimpan file-file yang membentuk kerangka itu sendiri. Meskipun Anda memiliki banyak fleksibilitas dalam cara menggunakan direktori aplikasi, file dalam direktori sistem tidak boleh diubah. Sebaliknya harus memperluas kelas, atau membuat kelas baru untuk menyediakan fungsionalitas yang diinginkan. <br>
+
+Semua file dalam direktori ini berada di bawah CodeIgniternamespace. <br>
+
+# publik <br>
+
+Folder publik menampung bagian aplikasi web yang dapat diakses browser, mencegah akses langsung ke kode sumber. Ini berisi file .htaccess utama, index.php, dan aset aplikasi apa pun yang di tambahkan, seperti CSS, javascript, atau gambar. <br>
+
+Folder ini sebagai “root web” situs, dan server web Anda akan dikonfigurasi untuk mengarah ke folder tersebut. <br>
+
+# dapat ditulis <br>
+Direktori ini menampung semua direktori yang mungkin perlu ditulisi selama masa pakai aplikasi. Ini termasuk direktori untuk menyimpan file cache, log, dan unggahan apa pun yang mungkin dikirim pengguna. Anda harus menambahkan direktori lain tempat aplikasi Anda perlu menulis di sini. Hal ini memungkinkan Anda untuk menjaga direktori utama lainnya tidak dapat ditulisi sebagai langkah keamanan tambahan.
+
+# tes <br>
+Direktori ini disiapkan untuk menyimpan file pengujian Anda. Direktori ini _support menampung berbagai kelas tiruan dan utilitas lain yang dapat digunakan saat menulis pengujian. Direktori ini tidak perlu ditransfer ke server produksi.
+
+# Memodifikasi Lokasi Direktori <br>
+Jika telah memindahkan salah satu direktori utama dapat mengubah pengaturan konfigurasi di dalam app/Config/Paths.php. <br>
+
+# B. Model, Tampilan, dan Pengontrol <br>
+CodeIgniter menggunakan pola Model, View, Controller (MVC) untuk mengatur file. Hal ini untuk menjaga data, presentasi, dan aliran melalui aplikasi sebagai bagian yang terpisah. Model mengelola data aplikasi dan membantu menegakkan aturan bisnis khusus yang mungkin diperlukan aplikasi. Tampilan adalah file sederhana, dengan sedikit atau 
+ anpa logika, yang menampilkan informasi kepada pengguna. Pengontrol bertindak sebagai kode perekat, menyusun data bolak-balik antara tampilan (atau pengguna yang melihatnya) dan penyimpanan data. <br>
+
+Pada dasarnya, pengontrol dan model hanyalah kelas yang memiliki tugas tertentu. Tentu saja mereka bukan satu-satunya tipe kelas yang dapat di gunakan, tetapi mereka membentuk inti bagaimana kerangka kerja ini dirancang untuk digunakan bahkan telah menetapkan direktori di direktori aplikasi untuk penyimpanannya, meskipun Anda bebas menyimpannya di mana pun Anda inginkan, asalkan diberi spasi nama yang benar. <br>
+
+# Komponen <br>
+# Tampilan <br>
+Tampilan adalah file paling sederhana dan biasanya berbentuk HTML dengan jumlah PHP yang sangat kecil. <br>
+
+# Model <br>
+Tugas model adalah memelihara satu tipe data untuk aplikasi. Ini mungkin pengguna, postingan blog, transaksi. Tugas model memiliki dua bagian: menerapkan aturan bisnis pada data saat diambil dari, atau dimasukkan ke dalam database, dan menangani penyimpanan dan pengambilan data sebenarnya dari database.
+
+# Pengendali <br>
+Pengendali memiliki beberapa peran berbeda untuk dimainkan. Yang paling jelas adalah mereka menerima masukan dari pengguna dan kemudian menentukan apa yang harus dilakukan dengannya. Penanggung jawab lain dari pengontrol adalah menangani segala sesuatu yang berkaitan dengan permintaan HTTP - pengalihan, otentikasi, keamanan web, pengkodean, dll. <br>
 
 
 
