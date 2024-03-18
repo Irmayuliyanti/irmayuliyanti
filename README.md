@@ -1,7 +1,7 @@
-# Pemograman Berbasis Framework
-# Nama : Irma Yuliyanti
-# NIM  : 220202086
-# Kelas : TI-2D
+## Pemograman Berbasis Framework
+Nama : Irma Yuliyanti 
+NIM  : 220202086
+Kelas : TI-2D
 
 **Apa yang dimaksud dengan Framework?**
 Framework adalah sebuah abstraksi pembuatan perangkat lunak dimana didalamnya menyediakan fungsi-fungsi umum yang dapat digunakan. Framework memiliki software yang terdiri dari kerangka kerja (yang didalamnya menyediakan standar & aturan pembuatan perangkat lunak sesuai dengan bahasanya), reusability (fungsi-fungsi yang dapat digunakan secara berulang), framework juga bisa berisi program, compiler, library, tool, sets, api, komponen, dll (digunakan untuk mempermudah perangkat lunak), semua bahasa pemogramam populer memliki framework.
