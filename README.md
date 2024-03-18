@@ -51,16 +51,16 @@ Basis data diperlukan untuk sebagian besar pemrograman aplikasi web. Basis data 
 # Instalasi CodeIgniter <br>
 CodeIgniter memiliki dua metode instalasi yang didukung: download manual, atau menggunakan Composer.
 # Menggunakan Composer <br>
-1. Pastikan Anda susdah mengisntal composer
+1. Pastikan Anda susdah mengisntal composer <br>
 ![image](https://github.com/Irmayuliyanti/irmayuliyanti/assets/134593991/22e0fc3f-7fb6-45ac-93bb-d1110c638277)
 
-2. Masukkan perintah download CI4, masukkan perintah cd nama file, masukkan php spark serve untuk menjalankan server 
+2. Masukkan perintah download CI4 <br>
 ![image](https://github.com/Irmayuliyanti/irmayuliyanti/assets/134593991/a498bdf0-9dc5-4a7e-b8a9-9ac9288aa724)
 
-3. 
+3. Masukkan perintah cd nama file, masukkan php spark serve untuk menjalankan server <br>
 ![image](https://github.com/Irmayuliyanti/irmayuliyanti/assets/134593991/17bcf074-a62f-40cb-bba4-a52c7e2f288e)
 
-4. CI4 sudah siap dipakai
+4. CI4 sudah siap dipakai <br>
 ![image](https://github.com/Irmayuliyanti/irmayuliyanti/assets/134593991/884a829c-453e-4d40-9ed6-d9723736927f)
 
 
